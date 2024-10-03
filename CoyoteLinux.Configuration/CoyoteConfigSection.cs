@@ -1,5 +1,5 @@
 ﻿// 
-//  ConfigSection.cs
+//  CoyoteConfigSection.cs
 //  
 //  Author:
 //       Joshua Jackson <jjackson@vortech.net>
@@ -14,6 +14,7 @@
 //
 //  This file is part of the Coyote Linux distribution. Please see the Coyote
 //  Linux web site for usage and licensing information.
+
 namespace CoyoteLinux.Configuration {
     public abstract class CoyoteConfigSection : ICoyoteConfigSection {
 

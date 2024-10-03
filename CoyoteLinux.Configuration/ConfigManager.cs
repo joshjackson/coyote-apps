@@ -21,8 +21,8 @@ using System.Xml.Serialization;
 namespace CoyoteLinux.Configuration {
     public class ConfigManager {
 
-        private CoyoteConfigFile _config;
-        public CoyoteConfigFile Config {
+        private CoyoteConfigFile? _config;
+        public CoyoteConfigFile? Config {
             get { return _config; }
             set { _config = value; }
         }
@@ -45,7 +45,7 @@ namespace CoyoteLinux.Configuration {
                 XmlSerializer s = new XmlSerializer(typeof(CoyoteConfigFile));
                 TextReader r = new StreamReader(_configDir + Filename);
                 try {
-                    _config = (CoyoteConfigFile)s.Deserialize(r);
+                    _config = (CoyoteConfigFile?)s.Deserialize(r);
                     return new CoyoteResult();
                 } finally {
                     r.Close();
@@ -103,7 +103,9 @@ namespace CoyoteLinux.Configuration {
         /// </summary>
         /// <returns>True if the file was saved successfully</returns>
         public CoyoteResult SaveWorkingConfig() {
-            _config.ConfigVersion++;
+            if (_config != null) {
+                _config.ConfigVersion++;
+            }
             return _saveConfigFile("working-config.xml");
         }
 

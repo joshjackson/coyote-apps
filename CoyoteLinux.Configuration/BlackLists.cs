@@ -32,7 +32,11 @@ namespace CoyoteLinux.Configuration {
 
         public BlackList() {
             id = Guid.NewGuid();
+            enabled = false;
+            Comment = String.Empty;
             Group = CoyoteConstants.SystemGroupID;
+            Source = String.Empty;
+            Destination = String.Empty;
         }
 
     }

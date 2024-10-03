@@ -14,9 +14,6 @@
 //
 //  This file is part of the Coyote Linux distribution. Please see the Coyote
 //  Linux web site for usage and licensing information.
-
-
-
 using System.Xml.Serialization;
 
 namespace CoyoteLinux.Configuration {
@@ -109,7 +106,6 @@ namespace CoyoteLinux.Configuration {
             _blackLists = new List<BlackList>();
         }
 
-
         private CoyoteLicenseLevel _getLicenseLevel() {
             if ((_licenseCode == "") || (_sysAct == null)) {
                 return CoyoteLicenseLevel.vlTrial;
@@ -126,7 +122,7 @@ namespace CoyoteLinux.Configuration {
             return newLevel;
         }
 
-        public NetworkObject FindObjectByName(string aName) {
+        public NetworkObject? FindObjectByName(string aName) {
 
             foreach (NetworkObject o in _networkObjects) {
                 if (o.ObjectName == aName) {

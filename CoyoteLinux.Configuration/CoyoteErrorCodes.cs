@@ -44,10 +44,10 @@ namespace CoyoteLinux.Configuration {
         public CoyoteErrorCode code;
         public string message;
 
-        public Object resultObj;
-        public List<Object> resultList;
+        public Object? resultObj;
+        public List<Object?>? resultList;
 
-        public Exception exception = null;
+        public Exception? exception = null;
 
         public CoyoteResult() {
             code = CoyoteErrorCode.SUCCESS;
@@ -74,7 +74,7 @@ namespace CoyoteLinux.Configuration {
             resultObj = aResult;
         }
 
-        public CoyoteResult(CoyoteErrorCode aCode, List<Object> aResultList) {
+        public CoyoteResult(CoyoteErrorCode aCode, List<Object?> aResultList) {
             code = aCode;
             message = GetErrorMessage();
             resultList = aResultList;

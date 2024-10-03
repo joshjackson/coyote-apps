@@ -1,4 +1,21 @@
-﻿using System.Xml.Serialization;
+﻿// 
+//  NetworkSettings.cs
+//  
+//  Author:
+//       Joshua Jackson <jjackson@vortech.net>
+// 
+//  Date:
+//      10/3/2024        
+//
+//  Product:
+//       Coyote Linux https://www.coyotelinux.com
+// 	
+//  Copyright (c) 1999-2024 Vortech Consulting, LLC, All rights reserved
+//
+//  This file is part of the Coyote Linux distribution. Please see the Coyote
+//  Linux web site for usage and licensing information.
+
+using System.Xml.Serialization;
 
 namespace CoyoteLinux.Configuration {
     [Serializable]
@@ -36,7 +53,7 @@ namespace CoyoteLinux.Configuration {
             UseSpanningTree = false;
         }
 
-        public NetworkInterface GetInterfaceByName(string ifName) {
+        public NetworkInterface? GetInterfaceByName(string ifName) {
             foreach (NetworkInterface iface in Interfaces) {
                 if (iface.Name.ToLower() == ifName.ToLower()) {
                     return iface;
@@ -45,7 +62,7 @@ namespace CoyoteLinux.Configuration {
             return null;
         }
 
-        public NetworkInterface GetInterface(Guid aGuid) {
+        public NetworkInterface? GetInterface(Guid aGuid) {
             foreach (NetworkInterface iface in Interfaces) {
                 if (iface.id == aGuid) {
                     return iface;

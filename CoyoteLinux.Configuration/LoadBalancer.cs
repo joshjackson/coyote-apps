@@ -1,4 +1,21 @@
-﻿using System.Xml.Serialization;
+﻿// 
+//  LoadBalancer.cs
+//  
+//  Author:
+//       Joshua Jackson <jjackson@vortech.net>
+// 
+//  Date:
+//      10/3/2024        
+//
+//  Product:
+//       Coyote Linux https://www.coyotelinux.com
+// 	
+//  Copyright (c) 1999-2024 Vortech Consulting, LLC, All rights reserved
+//
+//  This file is part of the Coyote Linux distribution. Please see the Coyote
+//  Linux web site for usage and licensing information.
+
+using System.Xml.Serialization;
 
 namespace CoyoteLinux.Configuration {
     [Serializable]
@@ -22,6 +39,8 @@ namespace CoyoteLinux.Configuration {
 
         public LoadBalancerRealHost() {
             Enabled = true;
+            Name = String.Empty;
+            Address = String.Empty;
             Backup = false;
             id = Guid.NewGuid();
             CheckInterval = 2000;
@@ -84,11 +103,20 @@ namespace CoyoteLinux.Configuration {
         public List<LoadBalancerRealHost> BackendServers;
 
         public LoadBalancerVirtualHost() {
+            Name = String.Empty;
+            Protocol = String.Empty;
+            VirtualIP = String.Empty;
+            Scheduler = String.Empty;
+            Comment = String.Empty;
+            ProxyMode = String.Empty;
+            MaxConns = 0;
+            ConnTimeout = 0;
+            BalancerMode = String.Empty;
             BackendServers = new List<LoadBalancerRealHost>();
             id = Guid.Empty;
         }
 
-        public LoadBalancerRealHost GetBackendServer(Guid anID) {
+        public LoadBalancerRealHost? GetBackendServer(Guid anID) {
             foreach (LoadBalancerRealHost rh in BackendServers) {
                 if (rh.id == anID) {
                     return rh;
@@ -147,7 +175,7 @@ namespace CoyoteLinux.Configuration {
             VirtualServers = new List<LoadBalancerVirtualHost>();
         }
 
-        public LoadBalancerVirtualHost GetVirtualHost(Guid anID) {
+        public LoadBalancerVirtualHost? GetVirtualHost(Guid anID) {
             foreach (LoadBalancerVirtualHost lvs in VirtualServers) {
                 if (lvs.id == anID) {
                     return lvs;
@@ -157,7 +185,7 @@ namespace CoyoteLinux.Configuration {
             return null;
         }
 
-        public LoadBalancerVirtualHost GetVirtualHost(Guid anID, Guid anOwner) {
+        public LoadBalancerVirtualHost? GetVirtualHost(Guid anID, Guid anOwner) {
             foreach (LoadBalancerVirtualHost lvs in VirtualServers) {
                 if ((lvs.id == anID) && (lvs.Owner == anOwner)) {
                     return lvs;
@@ -167,7 +195,7 @@ namespace CoyoteLinux.Configuration {
             return null;
         }
 
-        public LoadBalancerVirtualHost CreateVirtualHost() {
+        public LoadBalancerVirtualHost? CreateVirtualHost() {
             LoadBalancerVirtualHost vs = new LoadBalancerVirtualHost();
             vs.Enabled = true;
             vs.ConnTimeout = ConnectionTimeout;
@@ -178,7 +206,7 @@ namespace CoyoteLinux.Configuration {
         }
 
         public override string GenerateConfigText() {
-            return "";
+            return String.Empty;
         }
 
     }

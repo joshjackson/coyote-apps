@@ -32,9 +32,9 @@ namespace CoyoteLinux.Configuration {
 
         public IPSECTunnel() {
             Enabled = false;
+            TunnelName = String.Empty;
             id = Guid.NewGuid();
         }
-
     }
 
     [Serializable]
