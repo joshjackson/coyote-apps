@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "sysconfig": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": "Fedora"
+    }
+  }
+}
