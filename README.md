@@ -1,2 +1,2 @@
 # coyote-apps
-Coyote Linux System Utilities
+Coyote Linux version 4 System Utilities
