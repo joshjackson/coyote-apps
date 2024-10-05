@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Menus>
+  <CoyoteMenu MenuType="ADMIN">
+    <MenuItem name="ADMIN_NETWORKING">
+      <Title>Network Configuration</Title>
+      <Help>
+        Configure the basic settings required for
+        remote administration and network
+        connectivity.
+      </Help>
+    </MenuItem>
+    <MenuItem name="ADMIN_MONITOR">
+      <Title>System Monitor</Title>
+      <Help>
+        Monitor various system metrics. Network
+        traffic, CPU and memory utilization, and
+        various other statistics are presented and
+        constantly updated to keep an eye on the
+        general state of this system.
+      </Help>
+    </MenuItem>
+    <MenuItem name="ADMIN_LOCKDOWN">
+      <Title>System Lockdown</Title>
+      <Help>
+        Sets the system in lockdown mode. In this
+        mode, the network firewall policies are set
+        to drop all incoming packets, forwarding is
+        disabled, and the system can only be managed
+        from this console.
+      </Help>
+    </MenuItem>
+    <MenuItem name="ADMIN_FIRMWARE">
+      <Title>Firmware Updates</Title>
+      <Help>
+        Checks for updates to the system firmware.
+        If updates are available, they can be
+        downloaded directly and installed.
+      </Help>
+    </MenuItem>
+
+    <MenuItem name="ADMIN_REBOOT">
+      <Title>Reboot System</Title>
+      <Help>
+        Reboots the system. This will cause a
+        temporary disrution in network services
+        provided by this system.
+      </Help>
+    </MenuItem>
+
+    <MenuItem name="ADMIN_SHUTDOWN">
+      <Title>Halt System</Title>
+      <Help>
+        Shuts down the system. This safely shuts
+        the system by properly saving any log
+        files, configurations, and unwritten
+        disk contents. This will also initiate
+        a transfer of services if this system is
+        part of a fail-over cluster.
+      </Help>
+    </MenuItem>
+  </CoyoteMenu>
+
+  <CoyoteMenu MenuType="MONITOR">
+    <MenuItem name="ADMIN_NETWORKING">
+      <Title>Network Configuration</Title>
+      <Help>
+        Configure the basic settings required for
+        remote administration and network
+        connectivity.
+      </Help>
+    </MenuItem>
+  </CoyoteMenu>
+
+  <CoyoteMenu MenuType="MONITOR">
+    <MenuItem>
+      <Title></Title>
+      <Help>
+      </Help>
+    </MenuItem>
+  </CoyoteMenu>
+
+  <CoyoteMenu MenuType="USER">
+    <MenuItem>
+      <Title></Title>
+      <Help>
+      </Help>
+    </MenuItem>
+  </CoyoteMenu>
+
+  <CoyoteMenu MenuType="NETWORK">
+    <MenuItem name="NETWORK_INTERFACES">
+      <Title>Interface Configuration</Title>
+      <Help>
+        Configure the network interface settings.
+      </Help>
+    </MenuItem>
+  </CoyoteMenu>
+
+  <CoyoteMenu MenuType="DEBUG">
+    <MenuItem>
+      <Title></Title>
+      <Help>
+      </Help>
+    </MenuItem>
+  </CoyoteMenu>
+
+</Menus>

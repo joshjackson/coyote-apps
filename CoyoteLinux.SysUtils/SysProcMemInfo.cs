@@ -23,7 +23,31 @@ namespace CoyoteLinux.SysUtils {
         public long Slab { get; set; }
         public long SReclaimable { get; set; }
         public long SUnreclaim { get; set; }
-
+        public long KernelStack { get; set; }
+        public long PageTables { get; set; }
+        public long NFS_Unstable { get; set; }
+        public long Bounce { get; set; }
+        public long WritebackTmp { get; set; }
+        public long CommitLimit { get; set; }
+        public long Committed_AS { get; set; }
+        public long VmallocTotal { get; set; }
+        public long VmallocUsed { get; set; }
+        public long VmallocChunk { get; set; }
+        public long Percpu { get; set; }
+        public long AnonHugePages { get; set; }
+        public long ShmemHugePages { get; set; }
+        public long ShmemPmdMapped { get; set; }
+        public long FileHugePages { get; set; }
+        public long FilePmdMapped { get; set; }
+        public long HugePages_Total { get; set; }
+        public long HugePages_Free { get; set; }
+        public long HugePages_Rsvd { get; set; }
+        public long HugePages_Surp { get; set; }
+        public long Hugepagesize { get; set; }
+        public long Hugetlb { get; set; }
+        public long DirectMap4k { get; set; }
+        public long DirectMap2M { get; set; }
+        public long DirectMap1G { get; set; }
         // Additional fields can be added as needed
     }
 
@@ -68,6 +92,31 @@ namespace CoyoteLinux.SysUtils {
                 memInfo.Slab = memValues.GetValueOrDefault("Slab");
                 memInfo.SReclaimable = memValues.GetValueOrDefault("SReclaimable");
                 memInfo.SUnreclaim = memValues.GetValueOrDefault("SUnreclaim");
+                memInfo.KernelStack = memValues.GetValueOrDefault("KernelStack");
+                memInfo.PageTables = memValues.GetValueOrDefault("PageTables");
+                memInfo.NFS_Unstable = memValues.GetValueOrDefault("NFS_Unstable");
+                memInfo.Bounce = memValues.GetValueOrDefault("Bounce");
+                memInfo.WritebackTmp = memValues.GetValueOrDefault("WritebackTmp");
+                memInfo.CommitLimit = memValues.GetValueOrDefault("CommitLimit");
+                memInfo.Committed_AS = memValues.GetValueOrDefault("Committed_AS");
+                memInfo.VmallocTotal = memValues.GetValueOrDefault("VmallocTotal");
+                memInfo.VmallocUsed = memValues.GetValueOrDefault("VmallocUsed");
+                memInfo.VmallocChunk = memValues.GetValueOrDefault("VmallocChunk");
+                memInfo.Percpu = memValues.GetValueOrDefault("Percpu");
+                memInfo.AnonHugePages = memValues.GetValueOrDefault("AnonHugePages");
+                memInfo.ShmemHugePages = memValues.GetValueOrDefault("ShmemHugePages");
+                memInfo.ShmemPmdMapped = memValues.GetValueOrDefault("ShmemPmdMapped");
+                memInfo.FileHugePages = memValues.GetValueOrDefault("FileHugePages");
+                memInfo.FilePmdMapped = memValues.GetValueOrDefault("FilePmdMapped");
+                memInfo.HugePages_Total = memValues.GetValueOrDefault("HugePages_Total");
+                memInfo.HugePages_Free = memValues.GetValueOrDefault("HugePages_Free");
+                memInfo.HugePages_Rsvd = memValues.GetValueOrDefault("HugePages_Rsvd");
+                memInfo.HugePages_Surp = memValues.GetValueOrDefault("HugePages_Surp");
+                memInfo.Hugepagesize = memValues.GetValueOrDefault("Hugepagesize");
+                memInfo.Hugetlb = memValues.GetValueOrDefault("Hugetlb");
+                memInfo.DirectMap4k = memValues.GetValueOrDefault("DirectMap4k");
+                memInfo.DirectMap2M = memValues.GetValueOrDefault("DirectMap2M");
+                memInfo.DirectMap1G = memValues.GetValueOrDefault("DirectMap1G");
             } catch (Exception ex) {
                 Console.WriteLine($"Failed to parse /proc/meminfo: {ex.Message}");
             }
@@ -75,3 +124,4 @@ namespace CoyoteLinux.SysUtils {
             return memInfo;
         }
     }
+}

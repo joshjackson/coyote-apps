@@ -5,11 +5,17 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sysconfig", "sysconfig.csproj", "{6A2F929C-4AA2-4066-9F76-54DDAD6FB90A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoyoteLinux.SysConfig", "..\CoyoteLinux.SysConfig\CoyoteLinux.SysConfig.csproj", "{BEF1EC13-D5ED-43C5-B1A5-DDAA8E9404B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoyoteLinux.SysConfig", "..\CoyoteLinux.SysConfig\CoyoteLinux.SysConfig.csproj", "{BEF1EC13-D5ED-43C5-B1A5-DDAA8E9404B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoyoteLinux.Configuration", "..\CoyoteLinux.Configuration\CoyoteLinux.Configuration.csproj", "{4B0ED8C4-1B49-4DE1-8F31-47EEED7EA237}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoyoteLinux.Configuration", "..\CoyoteLinux.Configuration\CoyoteLinux.Configuration.csproj", "{4B0ED8C4-1B49-4DE1-8F31-47EEED7EA237}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoyoteLinux.SysUtils", "..\CoyoteLinux.SysUtils\CoyoteLinux.SysUtils.csproj", "{9C436D0C-04D8-43AE-B940-C6E56526C739}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoyoteLinux.SysUtils", "..\CoyoteLinux.SysUtils\CoyoteLinux.SysUtils.csproj", "{9C436D0C-04D8-43AE-B940-C6E56526C739}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPTables.Net", "..\..\IPTables.Net\IPTables.Net\IPTables.Net.csproj", "{553FE874-D002-4244-8AE7-E63D6DE3E496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoyoteConsole", "..\CoyoteConsole\CoyoteConsole.csproj", "{FBAD6619-73B0-4E44-A0DD-A9F4D64FA49B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mono-curses", "..\..\coyote-ncurses\mono-curses.csproj", "{B1089A76-F6BE-4F5B-AD31-3296CD5CD922}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{9C436D0C-04D8-43AE-B940-C6E56526C739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C436D0C-04D8-43AE-B940-C6E56526C739}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C436D0C-04D8-43AE-B940-C6E56526C739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{553FE874-D002-4244-8AE7-E63D6DE3E496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553FE874-D002-4244-8AE7-E63D6DE3E496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553FE874-D002-4244-8AE7-E63D6DE3E496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553FE874-D002-4244-8AE7-E63D6DE3E496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBAD6619-73B0-4E44-A0DD-A9F4D64FA49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBAD6619-73B0-4E44-A0DD-A9F4D64FA49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBAD6619-73B0-4E44-A0DD-A9F4D64FA49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBAD6619-73B0-4E44-A0DD-A9F4D64FA49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1089A76-F6BE-4F5B-AD31-3296CD5CD922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1089A76-F6BE-4F5B-AD31-3296CD5CD922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1089A76-F6BE-4F5B-AD31-3296CD5CD922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1089A76-F6BE-4F5B-AD31-3296CD5CD922}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
