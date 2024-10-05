@@ -13,7 +13,7 @@
 //  Vortech Software Use and Distribution License. Use and/or distrbution of
 //  this file without prior written consent from Vortech Consulting, LLC is in 
 //  violation of United States and International copyright laws.
-using Mono.Terminal;
+using CoyoteLinux.Terminal;
 using System.Collections;
 using System.Xml;
 using System.Xml.Serialization;

@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\coyote-ncurses\mono-curses.csproj" />
     <ProjectReference Include="..\CoyoteLinux.SysUtils\CoyoteLinux.SysUtils.csproj" />
+    <ProjectReference Include="..\CoyoteLinux.Terminal\CoyoteLinux.Terminal.csproj" />
   </ItemGroup>
 
 </Project>

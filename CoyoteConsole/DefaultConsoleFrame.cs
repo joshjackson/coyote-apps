@@ -14,7 +14,7 @@
 //  this file without prior written consent from Vortech Consulting, LLC is in 
 //  violation of United States and International copyright laws.
 using System;
-using Mono.Terminal;
+using CoyoteLinux.Terminal;
 using CoyoteLinux.SysUtils;
 
 namespace CoyoteConsole {

@@ -15,7 +15,7 @@
 //  violation of United States and International copyright laws.
 using System;
 using System.Collections.Generic;
-using Mono.Terminal;
+using CoyoteLinux.Terminal;
 
 namespace CoyoteConsole {
 

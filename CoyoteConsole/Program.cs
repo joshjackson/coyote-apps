@@ -1,4 +1,4 @@
-﻿using Mono.Terminal;
+﻿using CoyoteLinux.Terminal;
 
 namespace CoyoteConsole {
 
